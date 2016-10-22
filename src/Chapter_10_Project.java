@@ -84,7 +84,6 @@ public class Chapter_10_Project {
                     System.out.println("What is the address of the emergency?");                            // User inputs Address
                     user_Input.nextLine();                                                                  // Java needs something to absorb
                     Enhanced.setAddress(user_Input.nextLine());
-                 //   Address = user_Input.nextLine();
                 //    System.out.printf("Address: %s%n", Enhanced.getAddress());                              // Address stored
                 } catch (InputMismatchException e) {
                     System.out.println("Please repeat that, I asked where you?");                           // Error message
@@ -262,6 +261,15 @@ public class Chapter_10_Project {
                     Status, cell_Phone, Address, Latitude, Longitude, reverse_Geo_Code, Reliability) {};
 
             System.out.printf("%s", call_Log[i]);
+
+            /*
+            System.out.println("*The Computer screen goes blank and then says a simple message* Thank you for your input.");    // Exit message
+
+            call_Log[i] = new nine_one_one(Name, Time, Phone_Number, Nature, Accidental_Call, Description, Responding_Units,
+                    Status, cell_Phone, Address, Latitude, Longitude, reverse_Geo_Code, Reliability) {};
+
+            System.out.printf("%s", call_Log[i].toString());
+             */
 
         }
     }

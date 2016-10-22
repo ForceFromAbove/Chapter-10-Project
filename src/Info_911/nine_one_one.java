@@ -72,11 +72,28 @@ abstract public class nine_one_one {
         }
     }
 
-    public void setFullDescription() {
+    public void setFullRespondingUnits() {
+        for (int i = 0;i <= units_Count; units_Count++) {
+            FullRespondingUnits = FullRespondingUnits + Responding_Units[i];
+        }
+    }
+
+    /*
+    public String getFullDescription() {
         for (int i = 0;i <= des_Count; des_Count++) {
             FullDescription = FullDescription + Description[i];
         }
+        return getFullDescription();
     }
+
+    public String getFullRespondingUnits() {
+        for (int i = 0;i <= units_Count; units_Count++) {
+            FullRespondingUnits = FullRespondingUnits + Responding_Units[i];
+        }
+        return FullRespondingUnits;
+    }
+     */
+
 
     public String getName() {                                   // Get name
         return Name;
@@ -166,6 +183,14 @@ abstract public class nine_one_one {
                 "Accidential Call: %b%nDescription: %s%nResponding Units: %s%nStatus: %s%nCell Phone: %b%n",
                 getName(), getTime(), getPhone_Number(), getNature(), getAccidental_Call(), getDescription(), getResponding_Units(), getStatus(), getcell_Phone());
     }
+    /*
+    @Override
+    public String toString() {
+        return String.format("Name: %s%nTime: %s%nPhone Number: %s%nNature of Call: %s%n" +
+                        "Accidential Call: %b%nDescription: %s%nResponding Units: %s%nStatus: %s%nCell Phone: %b%n",
+                getName(), getTime(), getPhone_Number(), getNature(), getAccidental_Call(), getFullDescription(), getFullRespondingUnits(), getStatus(), getcell_Phone());
+    }
+    */
 }
 
 /**
