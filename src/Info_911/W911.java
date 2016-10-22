@@ -4,8 +4,8 @@ public class W911 extends nine_one_one {                        // Handles wirel
     private Double Latitude;
     private Double Longitude;
 
-    private String reverse_geo_code = "Dale's House";
-    private int reliability = 75;
+    private String Reverse_geo_code = "Dale's House";
+    private int Reliability = 75;
 
     public double getLatitude() {                               // Get Latitude
         return Latitude;
@@ -16,11 +16,11 @@ public class W911 extends nine_one_one {                        // Handles wirel
     }
 
     public int getReliability() {                               // Get geocode reliability
-        return reliability;
+        return Reliability;
     }
 
     public String getReverse_geo_code() {                       // New reverse geocode
-        return reverse_geo_code;
+        return Reverse_geo_code;
     }
 
     public void setLatitude(double Latitude) {                  // Set latitude
@@ -32,15 +32,21 @@ public class W911 extends nine_one_one {                        // Handles wirel
     }
 
     public void setReliability(int reliability) {               // Set reliability
-        this.reliability = reliability;
+        this.Reliability = reliability;
     }
 
     public void setReverse_geo_code(String reverse_geo_code) {  // Set new geocode
-        this.reverse_geo_code = reverse_geo_code;
+        this.Reverse_geo_code = reverse_geo_code;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%sLatitude: %f%nLongitude: %f%nReliability: %d%nReverse geo code: %s%n",
+                super.toString(), getLatitude(), getLongitude(), getReliability(), getReverse_geo_code());
     }
 }
 
 
 /**
- * Created by aaronewing on 9/22/2016. *
+ * Created by aaronewing on 10/21/2016. *
  */
